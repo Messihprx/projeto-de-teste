@@ -39,6 +39,7 @@ p{
     background-color:transparent;
     margin-left: 20px;
     z-index: 1;
+    max-width: 100%;
     
 }
 
@@ -83,6 +84,66 @@ button:active{
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 10px -10px 20px 5px aqua ;
+    width: 40%;
+    transition: transform 0.8s;
+}
+
+.imagem:hover{
+    transform: scale(1.1);
+}
+
+/* feito inteiramente com chat gpt */
+
+/* Media Query para telas pequenas (ex: celulares) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Ajuste para dar espaço nas bordas em dispositivos menores */
+    }
+
+    .container {
+        width: 80%; /* Aumenta a largura do container no celular */
+        height: auto; /* Deixa a altura flexível */
+        padding: 10px; /* Menos padding para dispositivos pequenos */
+    }
+
+    h1 {
+        font-size: 35px; /* Diminui o tamanho da fonte no celular */
+        position: static; /* Tira a posição absoluta para que o texto não sobreponha outros elementos */
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px; /* Ajusta o tamanho da fonte para leitura em telas menores */
+    }
+
+    .btns {
+        flex-direction: column; /* Coloca os botões em uma coluna no celular */
+        gap: 20px; /* Aumenta o espaço entre os botões */
+        bottom: 20px; /* Ajusta a posição dos botões para o celular */
+    }
+
+    .imagem {
+        left: 50%;
+        bottom: 0%;
+        width: 100%; /* A imagem ocupa toda a largura da tela no celular */
+        transform: translateX(-50%); /* Centraliza a imagem na tela */
+    }
+}
+
+/* Media Query para telas menores que 480px (celulares muito pequenos) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px; /* Reduz mais o tamanho do título */
+    }
+
+    p {
+        font-size: 16px; /* Ajusta a fonte do parágrafo para telas muito pequenas */
+    }
+
+    button {
+        padding: 15px 40px; /* Diminui o tamanho do botão para não ocupar muito espaço */
+        font-size: 16px; /* Ajusta o tamanho da fonte do botão */
+    }
 }
 
 
